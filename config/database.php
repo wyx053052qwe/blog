@@ -63,19 +63,34 @@ return [
 //            ]) : [],
 //        ],
         'mysql' => [
+            'driver' => 'mysql',
             'read' => [
-                'host' => '192.168.209.130',
+                'host' => ['192.168.209.130','192.168.209.131',]
             ],
+
             'write' => [
-                'host' => '196.168.209.129'
+                'host' => '192.168.209.129'
             ],
-            'driver'    => 'mysql',
-            'database'  => 'blog',
-            'username'  => 'root',
-            'password'  => 'root',
-            'charset'   => 'utf8',
-            'collation' => 'utf8_unicode_ci',
-            'prefix'    => '',
+
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE', 'test'),
+            'username' => env('DB_USERNAME', 'root'),
+            'password' => env('DB_PASSWORD', 'aaaa'),
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'strict' => true,
+            'engine' => null,
+
+            'modes'  => [
+                'ONLY_FULL_GROUP_BY',
+                'STRICT_TRANS_TABLES',
+                'NO_ZERO_IN_DATE',
+                'NO_ZERO_DATE',
+                'ERROR_FOR_DIVISION_BY_ZERO',
+                'NO_ENGINE_SUBSTITUTION',
+            ],
         ],
         'pgsql' => [
             'driver' => 'pgsql',
