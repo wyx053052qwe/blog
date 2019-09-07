@@ -62,21 +62,22 @@ return [
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
-//        'mysql' => [
-//            'read' => [
-//                'host' => '192.168.209.130',
-//            ],
-//            'write' => [
-//                'host' => '196.168.209.129'
-//            ],
-//            'driver'    => 'mysql',
-//            'database'  => 'blog',
-//            'username'  => 'root',
-//            'password'  => 'root',
-//            'charset'   => 'utf8',
-//            'collation' => 'utf8_unicode_ci',
-//            'prefix'    => '',
-//        ],
+        'mysql' => [
+            'read' => [
+                'host' => '192.168.209.130',
+                'host' => '192.168.209.131',
+            ],
+            'write' => [
+                'host' => '196.168.209.129'
+            ],
+            'driver'    => 'mysql',
+            'database'  => 'blog',
+            'username'  => 'root',
+            'password'  => 'root',
+            'charset'   => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix'    => '',
+        ],
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
@@ -133,7 +134,7 @@ return [
 
     'redis' => [
 
-        'client' => env('REDIS_CLIENT', 'predis'),
+        'client' => env('REDIS_CLIENT', 'phpredis'),
 
         'options' => [
             'cluster' => env('REDIS_CLUSTER', 'predis'),
