@@ -29,7 +29,7 @@ class TestController extends Controller
             $data = [
                 'user_name' => Str::random(10),
                 'email' => Str::random(12) . $emial_arr[mt_rand(1,4)],
-                'mobile' => $mobile_arr[mt_rand(1,7)] . mt_rand(8),
+                'mobile' => $mobile_arr[mt_rand(1,7)] . mt_rand(11111111,99999999),
                 'age' => mt_rand(1,99)
             ];
             $id=UserModel::insertGetId($data);
