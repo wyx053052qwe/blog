@@ -25,7 +25,7 @@ class TestController extends Controller
             3 => '@baidu.com',
             4 => '@xinlang.com'
         ];
-        for ($i=0;$i<10;$i++){
+        for ($i=0;$i<10000;$i++){
             $data = [
                 'user_name' => Str::random(10),
                 'email' => Str::random(12) . $emial_arr[mt_rand(1,4)],
