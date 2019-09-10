@@ -82,7 +82,6 @@ return [
             'prefix' => '',
             'strict' => true,
             'engine' => null,
-
             'modes'  => [
                 'ONLY_FULL_GROUP_BY',
                 'STRICT_TRANS_TABLES',
